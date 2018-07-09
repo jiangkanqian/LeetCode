@@ -26,7 +26,7 @@ public class Leetcode3 {
 				int pos = map.get(curStr);
 				subMax = 0;
 				map.clear();
-				for(int j=pos;j<=i;j++){
+				for(int j=pos+1;j<=i;j++){
 					subMax++;
 					map.put(Character.toString(s.charAt(j)), j);
 				}
@@ -44,7 +44,7 @@ public class Leetcode3 {
     }
 	
 	public static void main(String[] args){
-		String test = "abcabcbb";
+		String test = "bbbbb";
 		int max = lengthOfLongestSubstring(test);
 		System.out.println(max);
 	}
