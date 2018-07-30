@@ -66,7 +66,15 @@ public class Mrsw {
 	}
 	
 	public static void main(String[] args){
-		
+		Mrsw mw = new Mrsw();
+		MyData md = mw.new MyData();
+		Worker worker = mw.new Worker(md);
+		Thread t1 = new Thread(worker);
+		Thread t2 = new Thread(worker);
+		Thread t3 = new Thread(worker);
+		t1.start();
+		t2.start();
+		t3.start();
 	}
 	
 }
